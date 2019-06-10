@@ -7,11 +7,6 @@ class PostContainer extends React.Component {
     super();
   }
 
-
-
-
-
-
   render() {
 
     return (
@@ -34,8 +29,6 @@ class PostContainer extends React.Component {
     
   }
 
-
 }
-
 
 export default PostContainer;

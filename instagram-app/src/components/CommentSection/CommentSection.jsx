@@ -9,36 +9,33 @@ class CommentSection extends React.Component {
   }
 
 
-  render()  {
-    return(
-        <div className="comment-section">
+  render() {
+    return (
+      <div className="comment-section">
 
-             {
-              
-              this.props.comments.map(comment => {
-                 return (
-                     <Comment key={comment.id} comment={comment}/>
-                    
-                     ) 
+        {
 
-              })
+              this.props.comments.map(comment => (
+                <Comment key={comment.id} comment={comment} />
+
+              ))
 
              }
 
-             <div>
-                 <p>{this.props.timestamp}</p>
-             </div>
-
-
-            <div>
-            <hr/>
-            </div>
-
-             <div className="input-comment">
-             <input type="text" placeholder="add a comment"/>
-            </div>
-           
+        <div>
+          <p>{this.props.timestamp}</p>
         </div>
+
+
+        <div>
+          <hr />
+        </div>
+
+        <div className="input-comment">
+          <input type="text" placeholder="add a comment" />
+        </div>
+
+      </div>
     );
 
   }
