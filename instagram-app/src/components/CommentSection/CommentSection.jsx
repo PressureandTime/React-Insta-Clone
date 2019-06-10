@@ -16,14 +16,28 @@ class CommentSection extends React.Component {
              {
               
               this.props.comments.map(comment => {
-                 return <Comment key={comment.id} comment={comment}/>
+                 return (
+                     <Comment key={comment.id} comment={comment}/>
+                    
+                     ) 
 
               })
 
              }
+
+             <div>
+                 <p>{this.props.timestamp}</p>
+             </div>
+
+
+            <div>
+            <hr/>
+            </div>
+
              <div className="input-comment">
              <input type="text" placeholder="add a comment"/>
             </div>
+           
         </div>
     );
 

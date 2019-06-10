@@ -20,14 +20,23 @@ class SearchBar extends React.Component {
           </div>
 
             <div className="bar2">
+            <div>
             <input type="text" placeholder="Search" />
+            </div>
+            
           </div>
 
             <div className="bar3">
+            
+            <div className="bar3-icons">
               <i className="fas fa-compass fa-2x" />
               <i className="fas fa-heart fa-2x" />
               <i className="fas fa-user fa-2x" />
             </div>
+
+            </div>
+
+
           </div>
     
     );

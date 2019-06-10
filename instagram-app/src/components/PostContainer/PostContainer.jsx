@@ -27,18 +27,12 @@ class PostContainer extends React.Component {
           </div>
           
            <p>{this.props.user.likes} likes</p> 
-         <p>{this.props.user.timestamp}</p>   
-            <CommentSection comments={this.props.user.comments} />
+            <CommentSection comments={this.props.user.comments} timestamp={this.props.user.timestamp}/>
       </div>
     );
 
-
-
-
     
   }
-
-
 
 
 }

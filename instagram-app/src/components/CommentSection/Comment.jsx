@@ -15,6 +15,7 @@ class Comment extends React.Component {
            <p> <strong>{this.props.comment.username}</strong></p> 
             <p>{this.props.comment.text}</p>
             
+          <p>{this.props.comment.timestamp}</p>
             
             </div>
         )
