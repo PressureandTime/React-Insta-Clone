@@ -1,4 +1,5 @@
 import React from 'react';
+import './CommentStyle.css'
 
 class Comment extends React.Component {
   
@@ -9,9 +10,10 @@ class Comment extends React.Component {
 
     render(){
         return(
-            <div>
-            {this.props.comment.username}
-            {this.props.comment.text}
+            <div className="individual-comment">
+
+           <p>{this.props.comment.username}</p> 
+            <p>{this.props.comment.text}</p>
             
             
             </div>

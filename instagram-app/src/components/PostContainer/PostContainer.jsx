@@ -1,5 +1,6 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+import './PostContainer.css';
 
 class PostContainer extends React.Component {
   constructor() {
@@ -14,9 +15,9 @@ class PostContainer extends React.Component {
   render() {
 
     return (
-      <div className="Post-Container">
+      <div className="post-container">
             {this.props.user.username}
-            <img src={this.props.user.imageUrl} alt=""/>
+          <div className="big-image"><img src={this.props.user.imageUrl} alt=""/></div>  
             {this.props.user.likes}
             {this.props.user.timestamp}
             <CommentSection comments={this.props.user.comments} />
