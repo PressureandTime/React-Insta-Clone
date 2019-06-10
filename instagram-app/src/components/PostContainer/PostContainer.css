@@ -20,12 +20,13 @@
     -moz-border-radius: 50px;
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
+    padding: 10px;
 }
 
 
 .post-container-icons {
     display: inline-flex;
     justify-content: space-between;
-    width: 10%;
-    padding: 5px
+    width: 14%;
+    padding: 10px
 }
