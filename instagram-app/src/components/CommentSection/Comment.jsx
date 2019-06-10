@@ -1,5 +1,6 @@
 import React from 'react';
-import './CommentStyle.css'
+import './CommentStyle.css';
+import PropTypes from 'prop-types';
 
 class Comment extends React.Component {
   
@@ -7,8 +8,8 @@ class Comment extends React.Component {
         super()
     }
     
-
     render(){
+        console.log(this.props)
         return(
             <div className="individual-comment">
 
@@ -23,4 +24,23 @@ class Comment extends React.Component {
 
 }
 
+
+Comment.propTypes = {
+   
+   comment: PropTypes.shape({
+    id: PropTypes.number.isRequired,  
+    username: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
+  }).isRequired
+}
+
+
+Comment.defaultProps = {
+    comment: []
+}
+
+
+
 export default Comment
+
+

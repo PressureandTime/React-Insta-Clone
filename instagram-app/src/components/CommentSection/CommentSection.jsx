@@ -8,15 +8,14 @@ class CommentSection extends React.Component {
     super();
   }
 
-
   render() {
     return (
       <div className="comment-section">
 
         {
-
-              this.props.comments.map(comment => (
-                <Comment key={comment.id} comment={comment} />
+          this.props.comments.map((comment, index) => (
+            <Comment key={comment.id}  comment={comment} index={index} />
+                    
 
               ))
 
@@ -26,20 +25,26 @@ class CommentSection extends React.Component {
           <p>{this.props.timestamp}</p>
         </div>
 
-
         <div>
           <hr />
         </div>
 
         <div className="input-comment">
-          <input type="text" placeholder="add a comment" />
+          <input onKeyUp={
+
+            event => {
+          this.props.addComment(event, this.props.index);
+        }
+
+
+
+          } type="text" placeholder="add a comment" />
         </div>
 
       </div>
     );
 
   }
-
 
 }
 

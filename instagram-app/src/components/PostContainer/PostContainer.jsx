@@ -1,6 +1,8 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
+import PropTypes from 'prop-types';
 import './PostContainer.css';
+
 
 class PostContainer extends React.Component {
   constructor() {
@@ -8,7 +10,7 @@ class PostContainer extends React.Component {
   }
 
   render() {
-
+   
     return (
       <div className="post-container">
       <div className="thumb-nail-img"><img src={this.props.user.thumbnailUrl} width="50px" alt=""/>
@@ -18,11 +20,17 @@ class PostContainer extends React.Component {
           <div className="big-image"><img src={this.props.user.imageUrl} alt=""/></div>
           <div className="post-container-icons">
           <i className="fas fa-heart fa-2x" />
-          <i class="fas fa-comment fa-2x"></i>
+          <i className="fas fa-comment fa-2x"></i>
           </div>
           
            <p>{this.props.user.likes} likes</p> 
-            <CommentSection comments={this.props.user.comments} timestamp={this.props.user.timestamp}/>
+            <CommentSection 
+            comments={this.props.user.comments}
+           timestamp={this.props.user.timestamp}
+             addComment={this.props.addComment}
+             index={this.props.index}
+           />
+
       </div>
     );
 
@@ -30,5 +38,13 @@ class PostContainer extends React.Component {
   }
 
 }
+
+PostContainer.propTypes = {
+  user: PropTypes.object.isRequired,
+
+}
+
+
+
 
 export default PostContainer;

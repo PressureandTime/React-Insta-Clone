@@ -13,7 +13,31 @@ class App extends React.Component {
 
   }
 
+ AddComment = (event, index) => {
+    
+  if(event.key === 'Enter'){
+
+    const newComment = {
+      id: new Date().getTime(),
+      username: 'John',
+      text: event.target.value
+    }
+    
+    let {data} = this.state;
+    data[index].comments = data[index].comments.concat(newComment)
+    console.log(data)
+    this.setState({data:data})
+  }
+
+  
+
+}
+
+
+
+
   render() {
+  
     return (
       <div className="app-wrapper">
        
@@ -21,8 +45,13 @@ class App extends React.Component {
 
      {
 
-      this.state.data.map(user => {
-       return <PostContainer user={user} key={user.id}   />
+      this.state.data.map((user, index) => {
+       return <PostContainer
+        user={user} 
+        key={user.id} 
+        addComment={this.AddComment}
+        index={index}
+         />
 
       })
 
