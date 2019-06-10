@@ -11,6 +11,7 @@ class SearchBar extends React.Component {
 
   render() {
     return (
+        
       <div className="search-bar">
 
             <div className="bar1">
@@ -27,9 +28,8 @@ class SearchBar extends React.Component {
               <i className="fas fa-heart fa-2x" />
               <i className="fas fa-user fa-2x" />
             </div>
-
-
           </div>
+    
     );
   }
 

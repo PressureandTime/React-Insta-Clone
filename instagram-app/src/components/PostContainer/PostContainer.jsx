@@ -16,7 +16,10 @@ class PostContainer extends React.Component {
 
     return (
       <div className="post-container">
-            {this.props.user.username}
+      <div className="thumb-nail-img"><img src={this.props.user.thumbnailUrl} width="50px" alt=""/>
+        <p><strong>{this.props.user.username}</strong></p>
+      </div>     
+
           <div className="big-image"><img src={this.props.user.imageUrl} alt=""/></div>
           <div className="post-container-icons">
           <i className="fas fa-heart fa-2x" />

@@ -3,13 +3,13 @@
     display: flex;
     justify-content: space-around;
     
+    
 }
 
 
 
 .bar1 {
   display: flex;
-
   justify-content: space-between;
 }
 

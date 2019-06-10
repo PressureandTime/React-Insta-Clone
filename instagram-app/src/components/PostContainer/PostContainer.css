@@ -4,6 +4,25 @@
     padding: 10px;
 }
 
+
+.thumb-nail-img {
+    display: inline-flex;
+    width: 30%;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+
+
+.thumb-nail-img img {
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+
 .post-container-icons {
     display: inline-flex;
     justify-content: space-between;
