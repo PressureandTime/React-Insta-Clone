@@ -12,7 +12,7 @@ class Comment extends React.Component {
         return(
             <div className="individual-comment">
 
-           <p>{this.props.comment.username}</p> 
+           <p> <strong>{this.props.comment.username}</strong></p> 
             <p>{this.props.comment.text}</p>
             
             

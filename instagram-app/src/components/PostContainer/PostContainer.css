@@ -3,3 +3,10 @@
     flex-direction: column;
     padding: 10px;
 }
+
+.post-container-icons {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 10%;
+    padding: 5px
+}

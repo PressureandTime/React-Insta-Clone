@@ -1,4 +1,5 @@
 import React from 'react';
+import { placeholder } from '@babel/types';
 import Comment from './Comment';
 import './CommentStyle.css';
 
@@ -20,9 +21,9 @@ class CommentSection extends React.Component {
               })
 
              }
-
-             <input type="text"/>
-
+             <div className="input-comment">
+             <input type="text" placeholder="add a comment"/>
+            </div>
         </div>
     );
 
