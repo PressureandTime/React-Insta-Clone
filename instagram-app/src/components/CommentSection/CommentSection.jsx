@@ -12,12 +12,18 @@ class CommentSection extends React.Component {
   }
 
   render() {
+    
     return (
       <div className="comment-section">
 
         {
           this.props.comments.map((comment, index) => (
-            <Comment key={comment.id} comment={comment} index={index} />
+            <Comment key={comment.id}
+             comment={comment} 
+             index={index} 
+             deleteComment={this.props.deleteComment}
+               id={this.props.id}
+             />
 
 
           ))

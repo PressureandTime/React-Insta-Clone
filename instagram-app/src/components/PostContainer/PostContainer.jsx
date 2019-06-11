@@ -20,7 +20,7 @@ class PostContainer extends React.Component {
 
   render() {
 
-    console.log(this.props.user.likes)
+    console.log(this.props.user.id)
    
     return (
       <div className="post-container">
@@ -40,6 +40,8 @@ class PostContainer extends React.Component {
            timestamp={this.props.user.timestamp}
              addCommentFunction={this.props.addComment}
              index={this.props.index}
+             deleteComment={this.props.deleteComment}
+             id={this.props.user.id}
             
            />
 

@@ -54,10 +54,26 @@ componentDidMount(){
 }
 
 
-deleteComment = () => {
+deleteComment = (commentId, postId) => {
+      
+  // KEEPING THIS CODE FOR FUTURE REFERENCE
+  // const post = this.state.data.filter(post => post.id ==postId)
+  // const comment = post[0].comments.filter(comment => comment.id !== commentId)
+  //  console.log(comment)
+       
+
+       const newData = this.state.data.map(post => {
+         if(post.id == postId) {
+           post.comments = post.comments.filter(comment => comment.id !== commentId )
+         }
+         return post
+       })
+         
+      this.setState({data: newData})
 
 }
 
+ 
 //  KEEPING IT FOR FUTURE REFERENCE likingPost = () => {
  
 //     this.setState(prevState => {
@@ -86,7 +102,7 @@ deleteComment = () => {
         key={user.id} 
         addComment={this.AddComment}
         index={index}
-        
+        deleteComment={this.deleteComment}
 
          />
 
