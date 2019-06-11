@@ -6,15 +6,28 @@ class Comment extends React.Component {
   
     constructor(){
         super()
+        
     }
     
+
+    
+    deleteComment = (id, postId) => {
+      
+
+    }
+
+
+
+
     render(){
-        console.log(this.props)
+        
         return(
             <div className="individual-comment">
 
            <p> <strong>{this.props.comment.username}</strong></p> 
             <p>{this.props.comment.text}</p>
+            <button onClick={
+                () => { this.deleteComment(this.props.comment.id, this.props.postId)} }>Delete comment</button>
             
           <p>{this.props.comment.timestamp}</p>
             
@@ -23,6 +36,12 @@ class Comment extends React.Component {
     }
 
 }
+
+
+
+
+
+
 
 
 Comment.propTypes = {

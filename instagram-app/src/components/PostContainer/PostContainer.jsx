@@ -5,11 +5,22 @@ import './PostContainer.css';
 
 
 class PostContainer extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.state ={
+      totalLikes: this.props.user.likes
+    }
   }
 
+  increaseLikes = () => {
+    this.setState({totalLikes: this.state.totalLikes + 1})
+  }
+
+
+
   render() {
+
+    console.log(this.props.user.likes)
    
     return (
       <div className="post-container">
@@ -19,16 +30,17 @@ class PostContainer extends React.Component {
 
           <div className="big-image"><img src={this.props.user.imageUrl} alt=""/></div>
           <div className="post-container-icons">
-          <i className="fas fa-heart fa-2x" />
+          <i className="fas fa-heart fa-2x" onClick={this.increaseLikes} />
           <i className="fas fa-comment fa-2x"></i>
           </div>
           
-           <p>{this.props.user.likes} likes</p> 
+           <p>{this.state.totalLikes} likes</p> 
             <CommentSection 
             comments={this.props.user.comments}
            timestamp={this.props.user.timestamp}
-             addComment={this.props.addComment}
+             addCommentFunction={this.props.addComment}
              index={this.props.index}
+            
            />
 
       </div>

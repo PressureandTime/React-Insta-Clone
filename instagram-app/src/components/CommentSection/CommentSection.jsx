@@ -4,8 +4,11 @@ import Comment from './Comment';
 import './CommentStyle.css';
 
 class CommentSection extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.state = {
+      comments: this.props.comments
+    }
   }
 
   render() {
@@ -14,10 +17,10 @@ class CommentSection extends React.Component {
 
         {
           this.props.comments.map((comment, index) => (
-            <Comment key={comment.id}  comment={comment} index={index} />
-                    
+            <Comment key={comment.id} comment={comment} index={index} />
 
-              ))
+
+          ))
 
              }
 
@@ -30,15 +33,16 @@ class CommentSection extends React.Component {
         </div>
 
         <div className="input-comment">
-          <input onKeyUp={
+          <input
+            onKeyUp={
 
-            event => {
-          this.props.addComment(event, this.props.index);
-        }
-
+            (event) => { this.props.addCommentFunction(event, this.props.index); }
 
 
-          } type="text" placeholder="add a comment" />
+          }
+            type="text"
+            placeholder="Add a comment"
+          />
         </div>
 
       </div>

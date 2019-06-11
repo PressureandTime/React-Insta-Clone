@@ -8,10 +8,31 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      data : dummyData,
+      data : [],
+      count:0
     };
 
   }
+
+
+componentDidMount(){
+  console.log('Component has mounted')
+  this.setState({data: dummyData})
+}
+
+
+  filterUsers = (query) => {
+    this.setState({
+      data:dummyData
+    })
+    this.setState(
+      prevState => {
+    return {data: prevState.data.filter(post => post.username.includes(query))} 
+      } 
+    )
+  }
+
+
 
  AddComment = (event, index) => {
     
@@ -19,38 +40,54 @@ class App extends React.Component {
 
     const newComment = {
       id: new Date().getTime(),
-      username: 'John',
+      username: 'Johny',
       text: event.target.value
     }
+   
     
     let {data} = this.state;
     data[index].comments = data[index].comments.concat(newComment)
     console.log(data)
     this.setState({data:data})
   }
-
-  
-
+ 
 }
 
 
+deleteComment = () => {
+
+}
+
+//  KEEPING IT FOR FUTURE REFERENCE likingPost = () => {
+ 
+//     this.setState(prevState => {
+//       return {
+//         count: prevState.count + 1,
+//       }
+
+//     })
+//  }
 
 
   render() {
+    
+    console.log(this.state.data);
   
     return (
       <div className="app-wrapper">
        
-       <SearchBar/>
+       <SearchBar filterUsers={this.filterUsers}/>
 
      {
 
       this.state.data.map((user, index) => {
-       return <PostContainer
+       return <PostContainer 
         user={user} 
         key={user.id} 
         addComment={this.AddComment}
         index={index}
+        
+
          />
 
       })

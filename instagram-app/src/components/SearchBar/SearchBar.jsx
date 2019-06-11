@@ -4,9 +4,25 @@ import './SearchBar.css';
 
 class SearchBar extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.state ={
+      query : '',
+    }
   }
+
+  onChangeHandler = (event) => {
+   
+    this.setState({query:event.target.value})
+
+  }
+
+
+    filterUser = (event) => {
+    event.preventDefault();
+     this.props.filterUsers(this.state.query)
+
+    }
 
 
   render() {
@@ -20,8 +36,11 @@ class SearchBar extends React.Component {
         </div>
 
         <div className="bar2">
+        
           <div>
-            <input type="text" placeholder="Search" />
+           <form onSubmit={this.filterUser}>
+           <input onChange={this.onChangeHandler} type="text" placeholder="Search" />
+           </form>
           </div>
 
         </div>
