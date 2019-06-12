@@ -1,17 +1,14 @@
 
 
 body {
-  width: 900px;
-  margin: 2% auto;
-  display: flex;
-  flex-direction: column;
-  background-color: #e3c4a8;
-
- 
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-
+    width: 900px;
+    margin: 2% auto;
+    display: flex;
+    flex-direction: column;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",    sans-serif;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+   
 }
 
 code {
