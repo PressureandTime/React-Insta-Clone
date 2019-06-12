@@ -1,0 +1,19 @@
+.outside-of-form {
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+form{
+
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+form button {
+    display: flex;
+    width: 40%;
+    
+}
