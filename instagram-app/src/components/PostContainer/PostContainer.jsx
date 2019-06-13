@@ -35,7 +35,7 @@ class PostContainer extends React.Component {
         </ThumbNailImg>
 
         <div>
-          <img src={this.props.user.imageUrl} alt="" />
+          <img src={this.props.user.imageUrl} width="800px" alt="" />
         </div>
         <PostContainerIcons>
           <i className="fas fa-heart fa-2x" onClick={this.increaseLikes} />
