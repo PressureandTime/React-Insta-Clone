@@ -1,7 +1,11 @@
 import React from 'react';
+
 import { placeholder } from '@babel/types';
 import Comment from './Comment';
 import './CommentStyle.css';
+
+
+
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -13,6 +17,8 @@ class CommentSection extends React.Component {
 
   render() {
     
+   
+
     return (
       <div className="comment-section">
 
@@ -29,10 +35,7 @@ class CommentSection extends React.Component {
           ))
 
              }
-
-        <div>
-          <p>{this.props.timestamp}</p>
-        </div>
+             
 
         <div>
           <hr />

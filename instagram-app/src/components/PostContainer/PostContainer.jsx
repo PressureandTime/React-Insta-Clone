@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from 'moment';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
 import './PostContainer.css';
@@ -20,6 +21,8 @@ class PostContainer extends React.Component {
 
   render() {
 
+    const newTime = Moment(Date.parse(this.props.user.timestamp)).fromNow();
+
     console.log(this.props.user.id)
    
     return (
@@ -33,11 +36,14 @@ class PostContainer extends React.Component {
           <i className="fas fa-heart fa-2x" onClick={this.increaseLikes} />
           <i className="fas fa-comment fa-2x"></i>
           </div>
-          
+    
            <p>{this.state.totalLikes} likes</p> 
+        <div>
+          <p>{newTime}</p>
+        </div>
             <CommentSection 
             comments={this.props.user.comments}
-           timestamp={this.props.user.timestamp}
+          //  timestamp={this.props.user.timestamp}
              addCommentFunction={this.props.addComment}
              index={this.props.index}
              deleteComment={this.props.deleteComment}

@@ -18,13 +18,10 @@ class PostsPage extends React.Component {
     window.location.reload()
   }
 
-
-
 componentDidMount(){
   console.log('Component has mounted')
   this.setState({data: dummyData})
 }
-
 
   filterUsers = (query) => {
     this.setState({
@@ -36,8 +33,6 @@ componentDidMount(){
       } 
     )
   }
-
-
 
  AddComment = (event, index) => {
     
@@ -66,7 +61,6 @@ deleteComment = (commentId, postId) => {
   // const comment = post[0].comments.filter(comment => comment.id !== commentId)
   //  console.log(comment)
        
-
        const newData = this.state.data.map(post => {
          if(post.id == postId) {
            post.comments = post.comments.filter(comment => comment.id !== commentId )
@@ -78,28 +72,22 @@ deleteComment = (commentId, postId) => {
        )
          
       this.setState({data: newData})
-
 }
 
- 
 //  KEEPING IT FOR FUTURE REFERENCE likingPost = () => {
  
 //     this.setState(prevState => {
 //       return {
 //         count: prevState.count + 1,
 //       }
-
 //     })
 //  }
 
-
   render() {
-    
     console.log(this.state.data);
-  
     return (
       <div className="app-wrapper">
-       
+      
        <SearchBar
         filterUsers={this.filterUsers}
             
