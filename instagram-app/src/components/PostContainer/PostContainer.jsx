@@ -1,12 +1,12 @@
-import React from "react";
-import Moment from "moment";
-import CommentSection from "../CommentSection/CommentSection";
-import PropTypes from "prop-types";
+import React from 'react';
+import Moment from 'moment';
+import CommentSection from '../CommentSection/CommentSection';
+import PropTypes from 'prop-types';
 import {
   PostContainerWrapper,
   ThumbNailImg,
   PostContainerIcons
-} from "./PostContainerStyle";
+} from './PostContainerStyle';
 
 class PostContainer extends React.Component {
   constructor(props) {

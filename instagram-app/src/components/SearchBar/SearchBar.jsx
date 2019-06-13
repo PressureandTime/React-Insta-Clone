@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import {
   SearchBarContainer,
@@ -7,13 +7,13 @@ import {
   Bar3,
   Bar3Icons,
   Button
-} from "./SearchBarStyle";
+} from './SearchBarStyle';
 
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      query: ""
+      query: ''
     };
   }
 
@@ -27,7 +27,7 @@ class SearchBar extends React.Component {
   };
 
   LogOut = () => {
-    localStorage.removeItem("username");
+    localStorage.removeItem('username');
     window.location.reload();
   };
 

@@ -1,8 +1,7 @@
-import React from "react";
-import { placeholder } from "@babel/types";
-import Comment from "./Comment";
+import React from 'react';
+import { placeholder } from '@babel/types';
+import Comment from './Comment';
 import { CommentSectionWrapper } from './CommentSectionStyle';
-
 
 class CommentSection extends React.Component {
   constructor(props) {
@@ -32,7 +31,7 @@ class CommentSection extends React.Component {
         <div className="input-comment">
           <input
             onKeyUp={event => {
-             this.props.addCommentFunction(event, this.props.index);
+              this.props.addCommentFunction(event, this.props.index);
             }}
             type="text"
             placeholder="Add a comment"

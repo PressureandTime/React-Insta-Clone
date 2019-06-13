@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Button } from "../SearchBar/SearchBarStyle";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Button } from '../SearchBar/SearchBarStyle';
 
 class Comment extends React.Component {
   constructor() {
@@ -12,7 +12,6 @@ class Comment extends React.Component {
     return (
       <div className="individual-comment">
         <p>
-          
           <strong> {this.props.comment.username} </strong>
         </p>
         <p> {this.props.comment.text} </p>
@@ -21,7 +20,6 @@ class Comment extends React.Component {
             this.props.deleteComment(this.props.comment.id, this.props.id)
           }
         >
-
           Delete comment
         </Button>
         <p> {this.props.comment.timestamp} </p>

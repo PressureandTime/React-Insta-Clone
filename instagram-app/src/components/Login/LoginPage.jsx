@@ -1,20 +1,20 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import { Button } from "../SearchBar/SearchBarStyle";
-import {LoginPageWrapper} from './LoginPageStyle'
+import { Button } from '../SearchBar/SearchBarStyle';
+import { LoginPageWrapper } from './LoginPageStyle';
 
 class Login extends Component {
   constructor() {
     super();
 
     this.state = {
-      password: "",
-      username: ""
+      password: '',
+      username: ''
     };
   }
 
   Login = () => {
-    localStorage.setItem("username", this.state.username);
+    localStorage.setItem('username', this.state.username);
     window.location.reload();
   };
 
@@ -44,7 +44,7 @@ class Login extends Component {
           <Button onClick={this.Login}>
             <strong>Log in</strong>
           </Button>
-         
+
           <Button onClick={this.LogOut}>
             <strong>Log out</strong>
           </Button>

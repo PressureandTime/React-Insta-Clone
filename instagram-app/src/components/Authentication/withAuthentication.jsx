@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const Authentication = PostsPage => LoginPage =>
   class extends React.Component {
@@ -11,7 +11,7 @@ export const Authentication = PostsPage => LoginPage =>
     }
 
     componentDidMount() {
-      const username = localStorage.getItem("username");
+      const username = localStorage.getItem('username');
       return this.setState({ isLoggedIn: username !== null });
     }
 

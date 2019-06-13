@@ -1,8 +1,7 @@
-import React from "react";
-import dummyData from "../../dummy-data";
-import PostContainer from "../PostContainer/PostContainer";
-import SearchBar from "../SearchBar/SearchBar";
-
+import React from 'react';
+import dummyData from '../../dummy-data';
+import PostContainer from '../PostContainer/PostContainer';
+import SearchBar from '../SearchBar/SearchBar';
 
 class PostsPage extends React.Component {
   constructor() {
@@ -14,12 +13,12 @@ class PostsPage extends React.Component {
   }
 
   LogOut = () => {
-    localStorage.removeItem("username");
+    localStorage.removeItem('username');
     window.location.reload();
   };
 
   componentDidMount() {
-    console.log("Component has mounted");
+    console.log('Component has mounted');
     this.setState({ data: dummyData });
   }
 
@@ -35,10 +34,10 @@ class PostsPage extends React.Component {
   };
 
   AddComment = (event, index) => {
-    if (event.key === "Enter") {
+    if (event.key === 'Enter') {
       const newComment = {
         id: new Date().getTime(),
-        username: "Johny",
+        username: 'Johny',
         text: event.target.value
       };
 

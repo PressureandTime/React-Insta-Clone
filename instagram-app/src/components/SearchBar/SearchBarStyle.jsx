@@ -1,6 +1,5 @@
-import React from "react";
-import styled, { css } from "styled-components";
-
+import React from 'react';
+import styled, { css } from 'styled-components';
 
 export const Button = styled.button`
   border: none;
@@ -9,14 +8,12 @@ export const Button = styled.button`
   min-width: 50px;
   font-size: 16px;
   background-color: purple;
-  border-radius:10px;
+  border-radius: 10px;
 
   &:hover {
     opacity: 0.7;
   }
-
 `;
-
 
 export const SearchBarContainer = styled.div`
   width: 75%;
@@ -37,7 +34,6 @@ export const Bar2 = styled.div`
   display: flex;
   align-items: center;
   width: 30%;
-
 `;
 
 export const Bar3 = styled.div`
@@ -54,6 +50,3 @@ export const Bar3Icons = styled.div`
     padding: 10px;
   }
 `;
-
-
-
