@@ -1,62 +1,69 @@
-import React from 'react';
-import './SearchBar.css';
+import React from "react";
+
+import {
+  SearchBarContainer,
+  Bar1,
+  Bar2,
+  Bar3,
+  Bar3Icons,
+  Button
+} from "./SearchBarStyle";
 
 class SearchBar extends React.Component {
-
   constructor(props) {
     super(props);
-    this.state ={
-      query : '',
-    }
+    this.state = {
+      query: ""
+    };
   }
 
-  onChangeHandler = (event) => {
-    this.setState({query:event.target.value})
-  }
+  onChangeHandler = event => {
+    this.setState({ query: event.target.value });
+  };
 
-    filterUser = (event) => {
+  filterUser = event => {
     event.preventDefault();
-     this.props.filterUsers(this.state.query)
+    this.props.filterUsers(this.state.query);
+  };
 
-    }
-
-    LogOut = ()=> {
-      localStorage.removeItem('username')
-      window.location.reload()
-    }
-
+  LogOut = () => {
+    localStorage.removeItem("username");
+    window.location.reload();
+  };
 
   render() {
     return (
-      
-      <div className="search-bar">
-        <div className="bar1">
+      <SearchBarContainer>
+        <Bar1>
           <i className="fab fa-instagram fa-3x" />
           <h3>Instagram</h3>
-        </div>
+        </Bar1>
 
-        <div className="bar2">
-        
+        <Bar2>
           <div>
-           <form onSubmit={this.filterUser}>
-           <input onChange={this.onChangeHandler} type="text" placeholder="Search" />
-           </form>
+            <form onSubmit={this.filterUser}>
+              <input
+                onChange={this.onChangeHandler}
+                type="text"
+                placeholder="Search"
+              />
+            </form>
           </div>
-        </div>
+        </Bar2>
 
-        <div className="bar3">
-          <div className="bar3-icons">
+        <Bar3>
+          <Bar3Icons>
             <i className="fas fa-compass fa-2x" />
             <i className="fas fa-heart fa-2x" />
             <i className="fas fa-user fa-2x" />
-          </div>
-        </div>
-        <button className="log-out-button" onClick={this.LogOut}><strong>Log out</strong></button>
-      </div>
+          </Bar3Icons>
+        </Bar3>
+        <Button onClick={this.LogOut}>
+          <strong>Log out</strong>
+        </Button>
+      </SearchBarContainer>
     );
   }
-
 }
 
 export default SearchBar;
- 
